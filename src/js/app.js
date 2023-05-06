@@ -61,3 +61,29 @@ isWebp();
 // import { tabs } from './dev/tabs.js';
 // tabs();
 /*====================================================================================================*/
+
+function simpleDropdown() {
+  const dropdownToggler = document.querySelector('#dropdownToggler');
+  const list = dropdownToggler.nextElementSibling;
+
+  if (dropdownToggler) {
+    dropdownToggler.addEventListener('click', (e) => {
+      if (dropdownToggler.classList.contains('is-active')) {
+        dropdownToggler.classList.remove('is-active');
+        list.removeEventListener('click', listClick);
+      } else {
+        dropdownToggler.classList.add('is-active');
+        list.addEventListener('click', listClick);
+      }
+    });
+
+    function listClick(e) {
+      if (e.target.closest('.item-navbar__item')) {
+        dropdownToggler.classList.remove('is-active');
+        e.currentTarget.removeEventListener('click', listClick);
+      }
+    }
+  }
+}
+
+simpleDropdown();

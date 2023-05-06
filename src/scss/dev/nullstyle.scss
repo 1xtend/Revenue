@@ -55,6 +55,10 @@ button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
+a {
+  font-family: inherit;
+  color: inherit;
+}
 a,
 a:visited {
   text-decoration: none;
