@@ -134,13 +134,15 @@
       height: rem(35);
       background-color: var(--color-gray-opacity);
       border-radius: 50%;
-      transform: scale(0);
-      transition: transform 0.3s ease-in;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     @media (any-hover: hover) {
       &:hover::before {
         transform: scale(1);
+        opacity: 1;
       }
     }
 
