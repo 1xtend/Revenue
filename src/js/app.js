@@ -87,3 +87,19 @@ function simpleDropdown() {
 }
 
 simpleDropdown();
+
+const reloadPage = () => {
+  const logos = document.querySelectorAll('.logo');
+
+  if (logos.length > 0) {
+    logos.forEach((logo) => {
+      logo.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        location.reload();
+      });
+    });
+  }
+};
+
+reloadPage();
