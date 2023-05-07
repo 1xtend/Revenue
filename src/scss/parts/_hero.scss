@@ -1,0 +1,225 @@
+.hero {
+  padding: rem(170) 0 rem(70);
+
+  @media (max-width: $mdx992) {
+    padding: rem(90) 0 rem(40);
+  }
+
+  &__container {
+    display: flex;
+
+    @media (max-width: $mdx768) {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    flex: 0 1 50%;
+    padding-top: rem(52);
+
+    @media (min-width: em(768, 16)) {
+      padding-right: rem(16);
+    }
+    @media (max-width: $mdx992) {
+      padding-top: 0;
+      margin-bottom: rem(20);
+    }
+  }
+  &__title {
+    font-family: $family2;
+    font-size: rem(60);
+    line-height: lh(70, 60);
+
+    letter-spacing: em(-0.7, 60);
+    font-weight: $fw700;
+
+    &:not(:last-child) {
+      margin-bottom: em(16, 60);
+    }
+
+    @media (max-width: $mdx992) {
+      font-size: rem(48);
+    }
+    @media (max-width: $mdx768) {
+      font-size: rem(36);
+    }
+  }
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: em(29, 20);
+
+      @media (max-width: $mdx768) {
+        margin-bottom: em(15, 16);
+      }
+    }
+
+    & > p:not(:last-child) {
+      margin-bottom: em(10, 20);
+    }
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: rem(27);
+
+    @media (max-width: $mdx768) {
+      gap: rem(18);
+    }
+  }
+  &__btn {
+    @media (any-hover: hover) {
+      &:hover img {
+        filter: drop-shadow(0 0 rem(1) var(--color-blue));
+      }
+    }
+
+    img {
+      transition: filter 0.3s ease-in-out;
+    }
+  }
+  &__media {
+    flex: 0 1 50%;
+    display: flex;
+    padding-left: rem(100);
+    position: relative;
+
+    @media (min-width: em(768, 16)) {
+    }
+
+    @media (max-width: $mdx992) {
+      padding-left: 0;
+    }
+    @media (max-width: $mdx768) {
+      justify-content: center;
+    }
+    @media (max-width: $mdx380) {
+      justify-content: start;
+    }
+  }
+}
+
+.media-hero {
+  &__block {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('@img/hero/hero-decor.svg') center no-repeat;
+      width: rem(570);
+      height: rem(320);
+      top: 50%;
+      left: rem(-110);
+      transform: translateY(-50%);
+      z-index: -1;
+
+      @media (max-width: $mdx992) {
+        left: rem(-155);
+      }
+    }
+  }
+  &__phone {
+    max-width: rem(250);
+    min-height: rem(500);
+
+    @media (max-width: $mdx480) {
+      max-width: rem(220);
+      min-height: rem(300);
+    }
+
+    &_2 {
+      position: absolute;
+      top: rem(45);
+      right: rem(-158);
+
+      @media (max-width: $mdx992) {
+        right: rem(-100);
+      }
+      @media (max-width: $mdx768) {
+        right: rem(-70);
+      }
+    }
+
+    img {
+      user-select: none;
+      max-width: 100%;
+    }
+  }
+  &__content {
+    max-width: 100%;
+    position: absolute;
+    top: rem(90);
+    left: rem(33);
+
+    @media (max-width: $mdx480) {
+      top: rem(60);
+      left: rem(20);
+    }
+  }
+  &__avatar {
+    overflow: hidden;
+    width: rem(58);
+    height: rem(58);
+    border-radius: 50%;
+    border: rem(3) solid var(--color-light);
+
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+  &__uptitle {
+    font-size: rem(12);
+    line-height: lh(21, 12);
+    font-weight: $fw400;
+    display: inline-flex;
+    align-items: center;
+    padding-right: rem(18);
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: rem(2);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: rem(4);
+      width: rem(12);
+      height: rem(12);
+      background: url('@img/hero/waving.png') right / 100% 100% no-repeat;
+      z-index: 2;
+    }
+  }
+  &__title {
+    font-weight: $fw600;
+    font-family: $family2;
+    font-size: rem(20);
+    line-height: lh(30, 20);
+    max-width: em(192, 20);
+
+    @media (max-width: $mdx768) {
+      font-size: rem(16);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(192);
+
+      @media (max-width: $mdx480) {
+        margin-bottom: rem(160);
+      }
+    }
+  }
+  &__btn {
+    gap: rem(10);
+  }
+  &__arrow-btn {
+    fill: var(--color-light);
+    transform: rotate(-90deg);
+    width: rem(10);
+    height: rem(6);
+  }
+}

@@ -150,3 +150,42 @@
     }
   }
 }
+
+.button {
+  font-family: $family2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(23);
+  line-height: 1;
+  text-align: center;
+  font-weight: $fw600;
+  color: var(--color-light);
+
+  min-height: em(64, 23);
+  padding: em(5, 23) em(72, 23);
+  border-radius: em(3, 23);
+  background-color: var(--color-accent);
+  transition: background-color 0.3s ease-in-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  &_small {
+    font-size: rem(12);
+    padding: em(5, 12) em(18, 12);
+  }
+}
+
+.text {
+  font-size: rem(20);
+  font-weight: $fw400;
+  line-height: lh(32, 20);
+
+  @media (max-width: $mdx768) {
+    font-size: rem(16);
+  }
+}
