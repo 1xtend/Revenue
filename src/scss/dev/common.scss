@@ -227,6 +227,10 @@
   &__text {
     &:not(:last-child) {
       margin-bottom: em(40, 20);
+
+      @media (max-width: $mdx768) {
+        margin-bottom: em(20, 16);
+      }
     }
 
     & > p:not(:last-child) {

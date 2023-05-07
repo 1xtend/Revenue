@@ -1,0 +1,41 @@
+.integrations {
+  padding: rem(120) 0;
+
+  @media (max-width: $mdx992) {
+    padding: rem(80) 0;
+  }
+  @media (max-width: $mdx992) {
+    padding: rem(35) 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $mdx768) {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    flex: 0 1 50%;
+
+    @media (min-width: em(768, 16)) {
+      padding-right: rem(18);
+    }
+
+    @media (max-width: $mdx768) {
+      margin-bottom: rem(20);
+    }
+  }
+  &__media {
+    flex: 0 1 50%;
+
+    @media (min-width: em(768, 16)) {
+      padding-left: rem(18);
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
