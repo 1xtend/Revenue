@@ -1,0 +1,27 @@
+.interface {
+  padding: rem(120) 0;
+
+  @media (max-width: $mdx992) {
+    padding: rem(80) 0;
+  }
+  @media (max-width: $mdx992) {
+    padding: rem(35) 0;
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+
+      @media (max-width: $mdx768) {
+        margin-bottom: rem(24);
+      }
+    }
+  }
+  &__media {
+    background-color: var(--color-bg-dark);
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

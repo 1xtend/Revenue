@@ -191,6 +191,10 @@
 }
 
 .block {
+  &_center {
+    text-align: center;
+  }
+
   &__uptitle {
     display: inline-block;
     font-weight: $fw600;
