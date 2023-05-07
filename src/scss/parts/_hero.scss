@@ -1,8 +1,8 @@
 .hero {
-  padding: rem(170) 0 rem(70);
+  padding: rem(170) 0 rem(100);
 
   @media (max-width: $mdx992) {
-    padding: rem(90) 0 rem(40);
+    padding: rem(90) 0 rem(50);
   }
 
   &__container {
@@ -215,10 +215,17 @@
   }
   &__btn {
     gap: rem(10);
+
+    @media (any-hover: hover) {
+      &:hover svg {
+        transform: translateX(rem(4)) rotate(-90deg);
+      }
+    }
   }
   &__arrow-btn {
     fill: var(--color-light);
     transform: rotate(-90deg);
+    transition: transform 0.3s ease-in-out;
     width: rem(10);
     height: rem(6);
   }
