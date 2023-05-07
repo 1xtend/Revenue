@@ -4,6 +4,9 @@
   @media (max-width: $mdx992) {
     padding: rem(50) 0 rem(40);
   }
+  @media (max-width: $mdx768) {
+    padding: rem(50) 0 rem(25);
+  }
 
   &__sub {
     font-size: rem(14);
