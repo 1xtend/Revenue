@@ -185,6 +185,15 @@
   font-weight: $fw400;
   line-height: lh(32, 20);
 
+  &_small {
+    font-size: rem(16);
+    line-height: lh(28, 16);
+
+    @media (max-width: $mdx768) {
+      font-size: rem(14);
+    }
+  }
+
   @media (max-width: $mdx768) {
     font-size: rem(16);
   }
@@ -193,6 +202,8 @@
 .block {
   &_center {
     text-align: center;
+    max-width: rem(647);
+    margin: 0 auto;
   }
 
   &__uptitle {
