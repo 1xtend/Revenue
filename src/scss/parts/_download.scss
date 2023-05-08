@@ -1,11 +1,11 @@
 .download {
-  padding: rem(90) 0 rem(60);
+  padding: rem(90) 0 rem(120);
 
   @media (max-width: $mdx992) {
-    padding: rem(65) 0 rem(45);
+    padding: rem(65) 0 rem(90);
   }
-  @media (max-width: $mdx992) {
-    padding: rem(35) 0;
+  @media (max-width: $mdx768) {
+    padding: rem(35) 0 rem(70);
   }
 
   &__container {

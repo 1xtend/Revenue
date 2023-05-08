@@ -144,6 +144,11 @@
     transition: fill 0.3s ease-in-out;
   }
 
+  &_icon svg {
+    width: rem(19);
+    height: rem(19);
+  }
+
   @media (any-hover: hover) {
     &:hover svg {
       fill: var(--color-light-hover);
