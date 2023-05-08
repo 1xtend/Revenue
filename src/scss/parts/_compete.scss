@@ -48,9 +48,9 @@
   }
   &__item {
     position: absolute;
-    z-index: 3;
     display: inline-flex;
     gap: rem(10);
+    user-select: none;
 
     &_1 {
       top: 3%;

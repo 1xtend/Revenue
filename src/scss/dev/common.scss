@@ -175,6 +175,10 @@
     }
   }
 
+  @media (max-width: $mdx768) {
+    font-size: rem(18);
+  }
+
   &_small {
     font-size: rem(12);
     padding: em(5, 12) em(18, 12);

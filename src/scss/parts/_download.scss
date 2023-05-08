@@ -1,0 +1,64 @@
+.download {
+  padding: rem(90) 0 rem(60);
+
+  @media (max-width: $mdx992) {
+    padding: rem(65) 0 rem(45);
+  }
+  @media (max-width: $mdx992) {
+    padding: rem(35) 0;
+  }
+
+  &__container {
+    background-color: var(--color-bg-dark);
+    border-radius: rem(12);
+    gap: rem(20);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    @media (max-width: $mdx650) {
+      grid-template-columns: auto;
+      justify-items: center;
+      padding-top: rem(25);
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+  &__block {
+    max-width: rem(426);
+
+    @media (max-width: $mdx768) {
+      max-width: none;
+    }
+    @media (max-width: $mdx480) {
+      .block__btn {
+        width: 100%;
+      }
+    }
+  }
+  &__media {
+    padding: rem(35) rem(45) 0 0;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: $mdx992) {
+      padding: rem(20) rem(15) 0 0;
+    }
+    @media (max-width: $mdx768) {
+      padding: rem(20) 0 0;
+    }
+    @media (max-width: $mdx650) {
+      padding: 0;
+    }
+  }
+
+  &__image {
+    max-width: rem(368);
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
